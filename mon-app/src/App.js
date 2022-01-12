@@ -1,5 +1,7 @@
 import './App.css';
 import React from 'react';
+import Navbar from './Navbar';
+import Home from './Home';
 function App() {
    const title = "welcome to new blog";
   const likes = 50;
@@ -7,7 +9,10 @@ function App() {
    const link = "http://www.google.com";
   return (
     <div className="App">
-      <div className='content'>
+       <Navbar/>
+       <Home/>
+      {/* video 4 */}
+      {/* <div className='content4'>
         <h1>{title}</h1>
         <p> nombre de likes :{likes}</p>
         <p> nombre de likes{person.age}</p>
@@ -19,7 +24,7 @@ function App() {
 
 
         <a href={link}>Googe site </a>
-      </div>
+      </div> */}
     </div>
   );
 }
