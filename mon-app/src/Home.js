@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 
 
@@ -33,15 +34,7 @@ const Home = () => {
        <p>{name} is {age} old</p>
        <button onClick={handleClick}>Click me</button>
        <button onClick = { (e) => handleClick2('meir', e)}> Click me 2 </button>
-
-       {blogs.map((blog) => (
-       <div className="blog-preview" key={blog.id}>
-            <h2>ecrit par{blog.title}</h2>
-            <p> ecrit par {blog.author}</p>
-
-       </div>
-       ))}
-
+       <BlogList  blogs={blogs} title='all blog'/>
   </div>
   );
 }
