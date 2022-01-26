@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+
+.suggestion {
+  cursor: pointer;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+
+
+}
+.suggestion:hover{
+  background-color:cornsilk;
+}
+
+
 /* base styles */
 * {
   margin: 0;
@@ -48,3 +63,4 @@
   color: #f1356d;
   margin-bottom: 8px;
 }
+
