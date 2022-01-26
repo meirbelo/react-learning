@@ -1,7 +1,7 @@
 import { useState } from "react";
 import BlogList from "./BlogList";
-
-
+import ShowHide from "./ShowHide";
+import IconeReact from "./IconeReact";
 
 const Home = () => {
 
@@ -35,6 +35,8 @@ const Home = () => {
        <button onClick={handleClick}>Click me</button>
        <button onClick = { (e) => handleClick2('meir', e)}> Click me 2 </button>
        <BlogList  blogs={blogs} title='all blog'/>
+       <ShowHide />
+       <IconeReact />
   </div>
   );
 }
