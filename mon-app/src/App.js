@@ -2,6 +2,8 @@ import './App.css';
 import React from 'react';
 import Navbar from './Navbar';
 import Home from './Home';
+import Split from './Split';
+import FocusInput from './FocusInput';
 function App() {
    const title = "welcome to new blog";
   const likes = 50;
@@ -11,6 +13,8 @@ function App() {
     <div className="App">
        <Navbar/>
        <Home/>
+       <FocusInput />
+       <Split />
       {/* video 4 */}
       {/* <div className='content4'>
         <h1>{title}</h1>

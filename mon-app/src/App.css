@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+.focusInput:focus {
+  background: yellow;
+  color: red;
+}
