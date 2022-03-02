@@ -23,21 +23,18 @@ const Home = () => {
 
 
  //vdeo 10
- const [blogs, setBlogs] = useState([
-  { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-  { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-  { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 }
- ])
+ const [blogs, setBlogs] = useState(null)
  const [name, setName] = useState('Mario')
 
- const handleDelete = (id) => {
-     const newBlogs = blogs.filter(blog => blog.id !== id)
-     setBlogs(newBlogs)
- } 
  useEffect(() => {
-   console.log('useeffedct running')
-   console.log(name)
- },[name])
+  fetch('http://localhost:8000/blogs')
+  .then(res => {
+    return res.json();
+  })
+  .then(data=> {
+  setBlogs(data)
+  })
+ },[])
 
  return ( 
   <div className="home">
@@ -46,7 +43,7 @@ const Home = () => {
        <p>{name} is {age} old</p>
        <button onClick={handleClick}>Click me</button>
        <button onClick = { (e) => handleClick2('meir', e)}> Click me 2 </button>
-       <BlogList  blogs={blogs} title='all blog' handleDelete={handleDelete}/>
+    {blogs && <BlogList  blogs={blogs} title='all blog'/>}
        <button onClick={()=> setName('guili')}>change name to luigi</button>
        <p>{name}</p>
   </div>
